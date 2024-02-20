@@ -1,0 +1,203 @@
+<!Doctype html5>
+<html>
+<head>
+<style>
+h1
+{
+color:blue;
+text-shadow:2px 2px 2px pink,2px 2px 2px red;
+text-align:center;
+}
+#im
+{
+position:fixed;
+top:10%;
+left:30%;
+right:40%;
+height:598px;
+width:598px;
+}
+#kl
+{
+height:50px;
+width:190px;
+background-color:red;
+color:blue;
+position:fixed;
+top:92%;
+left:30%;
+right:50%;
+font-size:20px;
+}
+#kl:hover
+{
+background-color:black;
+text-shadow: 2px 2px 2px green;
+}
+#na
+{
+height:30px;
+width:150px;
+background-color:black;
+color:blue;
+text-shadow:2px 2px 2px red;
+position:fixed;
+top:49%;
+left:0%;
+right:95%;
+font-size:20px;
+}
+#na:hover
+{
+    background-color:red;
+}
+#bi
+{
+height:30px;
+width:150px;
+background-color:black;
+color:blue;
+text-shadow:2px 2px 2px red;
+position:fixed;
+top:49%;
+left:12%;
+right:91%;
+font-size:20px;
+}
+#bi:hover
+{
+    background-color:red;
+}
+#an
+{
+height:30px;
+width:150px;
+background-color:black;
+color:blue;
+text-shadow:2px 2px 2px red;
+position:fixed;
+top:50%;
+left:70%;
+right:30%;
+font-size:20px;
+}
+#an:hover
+{
+    background-color:red;
+}
+#sp
+{
+height:30px;
+width:150px;
+background-color:black;
+color:blue;
+text-shadow:2px 2px 2px red;
+position:fixed;
+top:50%;
+left:83%;
+right:20%;
+font-size:20px;
+}
+#sp:hover
+{
+    background-color:red;
+}
+#sry
+{
+height:50px;
+width:190px;
+background-color:red;
+color:blue;
+position:fixed;
+top:92%;
+left:57%;
+right:50%;
+font-size:20px;
+}
+</style>
+
+<script>
+function reset()
+{
+    document.getElementById("mn").src="welcome.jpg";
+}
+function res(id)
+{
+let x=id.value;
+if(x=="ANIMAL")
+{
+document.getElementById("kl").addEventListener("click",ani);
+}
+else if(x=="NATURE")
+{
+document.getElementById("kl").addEventListener("click",natu);
+}
+else if(x=="BIRD")
+{
+    document.getElementById("kl").addEventListener("click",bir);
+}
+else
+{
+    document.getElementById("kl").addEventListener("click",space);
+}
+}
+function ani()
+{
+
+    const arr=["zeb.jpeg","ele.jpeg","sqi.jpeg","tiger.jpeg","gira.jpeg","fox.jpeg","panda.jpeg","hippo.jpeg","lion.jpeg","nikh.jpg"];
+   
+    document.getElementById("mn").src=arr[Math.floor(Math.random()*arr.length)];
+}
+function natu()
+{
+    const r=["nat1.jpeg",
+"nat2.jpeg",
+"nat3.jpeg",
+"nat4.jpeg",
+"nat5.jpeg",
+"nat6.jpeg",
+"nat7.jpeg",
+"nat8.jpeg",
+"nat9.jpeg",
+"nat10 (1).jpeg"];
+    let g=Math.floor(Math.random()*r.length);
+    document.getElementById("mn").src=r[g];    
+document.getElementById("").addEventListener();
+}
+function space()
+{
+    const a=["g.jpeg","h.jpeg","j.jpeg","i.jpeg","l.jpeg","p.jpeg","s.jpeg","a.jpeg","space(1).jpeg","sp10.jpeg"];
+    let l=Math.floor(Math.random()*a.length);
+    document.getElementById("mn").src=a[l];    
+}
+function bir()
+{
+    const ar=["p1.jpeg","s1.jpeg","r1.jpeg","q1.jpeg","o1.jpg","b1.jpeg","sm.jpeg","pm.jpeg","mul.jpeg","com.jpeg","par.jpeg"];
+let y=ar.length;
+    let g=Math.floor(Math.random()*y);
+    let d=document.getElementById("mn");    
+    d.src=ar[g];
+}
+</script>
+
+</head>
+<body style="background-color:black;">
+<h1> IMAGE GENERATOR</h1>
+<img src="
+Downloads\imp.jpg" alt ="lmn" id="im">
+<img  style="position:fixed;
+top:29%;
+left:39%;
+right:40%;
+height:320px;
+width:320px;" src="welcome.jpg" alt="lmn"  id="mn">
+<button id="kl" >GENERATE IMAGE</button>
+<form>
+<input type="button" value="NATURE" id ="na"  onclick="res(this)">
+<input type="button" value="BIRD" id="bi"  onclick="res(this)">
+<input type="button" value="ANIMAL" id="an" onclick="res(this)">
+<input type="button" value="SPACE" id ="sp" onclick="res(this)">
+</form>
+<button id="sry" onclick="reset()"> RESET</button>
+</bodY>
+</html>
